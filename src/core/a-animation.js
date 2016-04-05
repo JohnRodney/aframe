@@ -442,6 +442,7 @@ function getAnimationValues (el, attribute, dataFrom, dataTo, currentValue) {
   }
 }
 module.exports.getAnimationValues = getAnimationValues;
+module.exports.getComputedAttributeFor = getComputedAttributeFor;
 
 /**
  * Converts string to bool.
@@ -469,7 +470,7 @@ function boolToNum (bool) {
  *
  * @param {object} element to look up attribute on
  * @param {string} attr dot notation or singular 'color' or 'material.color'
- * @returns {object|string|number} resulting value of type of component property.
+ * @returns Resulting value of component property.
  */
 function getComputedAttributeFor (el, attribute) {
   var attributeSplit = attribute.split('.');
